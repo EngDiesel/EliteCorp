@@ -16,13 +16,22 @@
     transition: all .3s ease;
 }
 
+.textShadow(@color) {
+    -webkit-text-shadow: 0 0 1px @color;
+    -moz-text-shadow: 0 0 1px @color;
+    -ms-text-shadow: 0 0 1px @color;
+    -o-text-shadow: 0 0 1px @color;
+    text-shadow: 0 0 1px @color;
+}
+
 /* End Mixins */
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Start Upper-bar */
@@ -59,3 +68,44 @@
 }
 
 /* End Upper-bar */
+
+/* Start Navbar */
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            color: @blue;
+            .transition;
+            .textShadow(#333);
+            &:hover {
+                color: lighten(@blue, 20%);
+            }
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+        .active {
+            & > .nav-link {
+                .textShadow(@red);
+                color: @red;
+            }
+        }
+    }
+}
+
+.navbar {
+    .navbar-brand {
+        color: @blue;
+        font-weight: bold;
+        font-size: 32px;
+        &:hover {
+            color: @blue;
+        }
+        span {
+            color: @red;
+            font-weight: lighter;
+        }
+    }
+}
+
+/* End Navbar */
