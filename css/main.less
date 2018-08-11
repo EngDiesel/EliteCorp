@@ -32,6 +32,39 @@
     border-radius: @radius;
 }
 
+.animation(@animation) {
+    -webkit-animation: @animation;
+    -moz-animation: @animation;
+    -ms-animation: @animation;
+    -o-animation: @animation;
+    animation: @animation;
+}
+
+.boxShadow (@shadow) {
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    -ms-box-shadow: @shadow;
+    -o-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+
+.keyframes(@name, @_25, @_50, @_75, @_100) {
+    @keyframes rotation {
+        25% {
+            transform: @_25;
+        }
+        50% {
+            transform: @_50;
+        }
+        75% {
+            transform: @_75;
+        }
+        100% {
+            transform: @_100;
+        }
+    }
+}
+
 /* End Mixins */
 
 /* Start Global */
@@ -42,6 +75,10 @@
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
 }
 
 /* End Global */
@@ -73,14 +110,17 @@
         background-color: transparent;
         .transition();
         .borderRadius(5px);
+        .boxShadow(0 5px 1px darken(@red, 10%));
         cursor: pointer;
         &:focus {
             outline: none;
         }
-        &:hover {
-            transform: translate(5px, 0);
+        &:active {
+            .boxShadow(0 2px 5px darken(@red, 15%));
+            transform: translate(0, 3px);
         }
     }
+
 
     .left-align {
         span:first-child {
@@ -177,3 +217,45 @@
 }
 
 /* End SLider */
+
+/* Start Features */
+
+.features {
+    height: 500px;
+    .feature-item {
+        span {
+            display: inline-block;
+            margin-top: 70px;
+            color: #fff;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            line-height: 110px;
+            background-color: @red;
+            &:hover {
+                .animation(rotation .6s linear infinite);
+            }
+        }
+
+        h3 {
+            margin: 15px auto 10px;
+            color: @blue;
+        }
+        p {
+            text-align: center;
+            color: #929292;
+        }
+    }
+}
+
+/* End Features */
+
+/* Start Keyframes */
+
+.keyframes(rotation,
+rotate(15deg),
+rotate(0),
+rotate(-15deg),
+rotate(0));
+
+/* End Keyframes */
