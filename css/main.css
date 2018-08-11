@@ -1,6 +1,50 @@
+/* Start Variables */
+/* End Variables */
+/* Start Mixins */
+.transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* End Mixins */
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
 }
+/* Start Upper-bar */
+.upper-bar {
+  background-color: #034c6e;
+  padding: 15px;
+  color: #fff;
+}
+.upper-bar .right-align {
+  text-align: right;
+}
+.upper-bar button {
+  color: #eee;
+  border: 1px solid #ff3120;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.upper-bar button:focus {
+  outline: none;
+}
+.upper-bar button:hover {
+  transform: translate(5px, 0);
+}
+.upper-bar .left-align span:first-child {
+  margin-right: 10px;
+}
+.upper-bar .left-align span:first-child i {
+  padding: 0 5px;
+}
+/* End Upper-bar */

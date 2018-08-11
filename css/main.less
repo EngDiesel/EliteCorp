@@ -1,6 +1,61 @@
+/* Start Variables */
+
+@red: rgb(255, 49, 32);
+@blue: rgb(3, 76, 110);
+
+/* End Variables */
+
+/* Start Mixins */
+
+.transition {
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+/* End Mixins */
+
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
 }
+
+/* Start Upper-bar */
+
+.upper-bar {
+    background-color: @blue;
+    padding: 15px;
+    color: #fff;
+    .right-align {
+        text-align: right;
+    }
+    button {
+        color: #eee;
+        border: 1px solid @red;
+        background-color: transparent;
+        .transition();
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            transform: translate(5px, 0);
+        }
+    }
+
+    .left-align {
+        span:first-child {
+            margin-right: 10px;
+            i {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+/* End Upper-bar */
