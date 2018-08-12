@@ -32,6 +32,22 @@
     border-radius: @radius;
 }
 
+.textTransform(@val) {
+    -webkit-text-transform: @val;
+    -moz-text-transform: @val;
+    -ms-text-transform: @val;
+    -o-text-transform: @val;
+    text-transform: @val;
+}
+
+.letterSpacing(@val) {
+    -webkit-letter-spacing: @val;
+    -moz-letter-spacing: @val;
+    -ms-letter-spacing: @val;
+    -o-letter-spacing: @val;
+    letter-spacing: @val;
+}
+
 .animation(@animation) {
     -webkit-animation: @animation;
     -moz-animation: @animation;
@@ -50,6 +66,50 @@
 
 .keyframes(@name, @_25, @_50, @_75, @_100) {
     @keyframes rotation {
+        25% {
+            transform: @_25;
+        }
+        50% {
+            transform: @_50;
+        }
+        75% {
+            transform: @_75;
+        }
+        100% {
+            transform: @_100;
+        }
+    }
+
+    @-webkit-keyframes rotation {
+        25% {
+            transform: @_25;
+        }
+        50% {
+            transform: @_50;
+        }
+        75% {
+            transform: @_75;
+        }
+        100% {
+            transform: @_100;
+        }
+    }
+
+    @-moz-keyframes rotation {
+        25% {
+            transform: @_25;
+        }
+        50% {
+            transform: @_50;
+        }
+        75% {
+            transform: @_75;
+        }
+        100% {
+            transform: @_100;
+        }
+    }
+    @-o-keyframes rotation {
         25% {
             transform: @_25;
         }
@@ -110,13 +170,13 @@ body {
         background-color: transparent;
         .transition();
         .borderRadius(5px);
-        .boxShadow(0 5px 1px darken(@red, 10%));
+        .boxShadow(0 5px 0 darken(@red, 10%));
         cursor: pointer;
         &:focus {
             outline: none;
         }
         &:active {
-            .boxShadow(0 2px 5px darken(@red, 15%));
+            .boxShadow(0 2px 0 darken(@red, 15%));
             transform: translate(0, 3px);
         }
     }
@@ -221,7 +281,7 @@ body {
 /* Start Features */
 
 .features {
-    height: 500px;
+    height: 400px;
     .feature-item {
         span {
             display: inline-block;
@@ -249,6 +309,58 @@ body {
 }
 
 /* End Features */
+
+/* Start Overview */
+
+.overview {
+    background-color: #f2f3f9;
+    height: 350px;
+    padding-top: 50px;
+    h1 {
+        color: #2d2d2d;
+        margin-bottom: 20px;
+        .textTransform(uppercase);
+        letter-spacing: 6px;
+    }
+    p {
+        width: 70%;
+        margin: 0 auto;
+        color: #848484;
+    }
+    span {
+        .textTransform(uppercase);
+        .letterSpacing(5px);
+        display: block;
+        margin: 20px auto 10px;
+        font-weight: lighter;
+        color: @blue
+    }
+    button {
+        background-color: @red;
+        border: none;
+        padding: 10px 30px;
+        color: #fff;
+        .boxShadow(0 7px 0 #999);
+        .borderRadius(5px);
+        cursor: pointer;
+        .transition;
+        &:hover {
+            transform: translate(0, 1px);
+            .boxShadow(0 6px 0 #999);
+        }
+
+        &:active {
+            transform: translate(0, 3px);
+            .boxShadow(0 4px 0 #999);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+/* End Overview */
 
 /* Start Keyframes */
 

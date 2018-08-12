@@ -17,6 +17,7 @@ $(function () {
         $('.slider, .carousel-item').height(winH - (upperH + navH));
     }
     adjustSliderHieght();
-
     // End Slider
+
+
 });

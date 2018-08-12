@@ -55,22 +55,22 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 1px #ec1200;
-  -moz-box-shadow: 0 5px 1px #ec1200;
-  -ms-box-shadow: 0 5px 1px #ec1200;
-  -o-box-shadow: 0 5px 1px #ec1200;
-  box-shadow: 0 5px 1px #ec1200;
+  -webkit-box-shadow: 0 5px 0 #ec1200;
+  -moz-box-shadow: 0 5px 0 #ec1200;
+  -ms-box-shadow: 0 5px 0 #ec1200;
+  -o-box-shadow: 0 5px 0 #ec1200;
+  box-shadow: 0 5px 0 #ec1200;
   cursor: pointer;
 }
 .upper-bar button:focus {
   outline: none;
 }
 .upper-bar button:active {
-  -webkit-box-shadow: 0 2px 5px #d31000;
-  -moz-box-shadow: 0 2px 5px #d31000;
-  -ms-box-shadow: 0 2px 5px #d31000;
-  -o-box-shadow: 0 2px 5px #d31000;
-  box-shadow: 0 2px 5px #d31000;
+  -webkit-box-shadow: 0 2px 0 #d31000;
+  -moz-box-shadow: 0 2px 0 #d31000;
+  -ms-box-shadow: 0 2px 0 #d31000;
+  -o-box-shadow: 0 2px 0 #d31000;
+  box-shadow: 0 2px 0 #d31000;
   transform: translate(0, 3px);
 }
 .upper-bar .left-align span:first-child {
@@ -161,7 +161,7 @@ body {
 /* End SLider */
 /* Start Features */
 .features {
-  height: 500px;
+  height: 400px;
 }
 .features .feature-item span {
   margin-top: 70px;
@@ -188,8 +188,129 @@ body {
   color: #929292;
 }
 /* End Features */
+/* Start Overview */
+.overview {
+  background-color: #f2f3f9;
+  height: 350px;
+  padding-top: 50px;
+}
+.overview h1 {
+  color: #2d2d2d;
+  margin-bottom: 20px;
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.overview p {
+  width: 70%;
+  margin: 0 auto;
+  color: #848484;
+}
+.overview span {
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+  -webkit-letter-spacing: 5px;
+  -moz-letter-spacing: 5px;
+  -ms-letter-spacing: 5px;
+  -o-letter-spacing: 5px;
+  letter-spacing: 5px;
+  display: block;
+  margin: 20px auto 10px;
+  font-weight: lighter;
+  color: #034c6e;
+}
+.overview button {
+  background-color: #ff3120;
+  border: none;
+  padding: 10px 30px;
+  color: #fff;
+  -webkit-box-shadow: 0 7px 0 #999;
+  -moz-box-shadow: 0 7px 0 #999;
+  -ms-box-shadow: 0 7px 0 #999;
+  -o-box-shadow: 0 7px 0 #999;
+  box-shadow: 0 7px 0 #999;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.overview button:hover {
+  transform: translate(0, 1px);
+  -webkit-box-shadow: 0 6px 0 #999;
+  -moz-box-shadow: 0 6px 0 #999;
+  -ms-box-shadow: 0 6px 0 #999;
+  -o-box-shadow: 0 6px 0 #999;
+  box-shadow: 0 6px 0 #999;
+}
+.overview button:active {
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 4px 0 #999;
+  -moz-box-shadow: 0 4px 0 #999;
+  -ms-box-shadow: 0 4px 0 #999;
+  -o-box-shadow: 0 4px 0 #999;
+  box-shadow: 0 4px 0 #999;
+}
+.overview button:focus {
+  outline: none;
+}
+/* End Overview */
 /* Start Keyframes */
 @keyframes rotation {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes rotation {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-moz-keyframes rotation {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-o-keyframes rotation {
   25% {
     transform: rotate(15deg);
   }
