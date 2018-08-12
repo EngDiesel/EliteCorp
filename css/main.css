@@ -316,6 +316,7 @@ body {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .work ul li.active:hover {
   transform: scale(1) translate(0, 0);
   -webkit-box-shadow: 0 0 1px #ff3120;
@@ -329,6 +330,8 @@ body {
   -o-text-shadow: 0 0 1px #ff3120;
   text-shadow: 0 0 1px #ff3120;
 }
+=======
+>>>>>>> parent of aa0fbc3... fixed filters bug.
 =======
 >>>>>>> parent of aa0fbc3... fixed filters bug.
 .work ul li:hover {
