@@ -153,7 +153,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: fade(#333, 50%); //        fade(black, 2%);
+    background-color: fade(#333, 50%);
     z-index: 1;
 }
 
@@ -391,16 +391,10 @@ body {
             cursor: pointer;
             .borderRadius(5px);
             .transition;
-<<<<<<< HEAD
             &.active {
                 background-color: @red;
                 border-color: @red;
                 color: #fff;
-                &:hover {
-                    transform: scale(1) translate(0, 0);
-                    .boxShadow(0 0 1px @red);
-                    .textShadow(@red);
-                }
             }
             &:hover {
                 transform: scale(1) translate(3px, 1px);
@@ -409,51 +403,43 @@ body {
             }
             &:active {
                 transform: scale(1.1) translate(0, 0);
-=======
-            &.active,
-            &:hover {
-                background-color: @red;
-                border-color: @red;
-                color: #fff;
->>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
-            }
-        }
-    }
-    .shuffle-images {
-        .container-fluid {
-            padding: 0;
-        }
-        .row {
-            margin: 0;
-            .col-md {
-                padding: 0;
-                overflow: hidden;
-            }
-
-            img {
-                width: 100%;
-                .transition;
+                &.active,
                 &:hover {
-                    transform: scale(1.1);
+                    background-color: @red;
+                    border-color: @red;
+                    color: #fff;
+                    transform: translate(3px, 1px);
+                }
+            }
+        }
+        .shuffle-images {
+            .container-fluid {
+                padding: 0;
+            }
+            .row {
+                margin: 0;
+                .col-md {
+                    padding: 0;
+                    overflow: hidden;
+                }
+
+                img {
+                    width: 100%;
+                    .transition;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
     }
-}
 
-<<<<<<< HEAD
-=======
+    /* End Work */
+    /* Start Keyframes */
+    .keyframes(rotation,
+    rotate(15deg),
+    rotate(0),
+    rotate(-15deg),
+    rotate(0));
 
-
->>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
-/* End Work */
-
-/* Start Keyframes */
-
-.keyframes(rotation,
-rotate(15deg),
-rotate(0),
-rotate(-15deg),
-rotate(0));
-
-/* End Keyframes */
+    /* End Keyframes */
