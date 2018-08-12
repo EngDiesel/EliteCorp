@@ -304,11 +304,17 @@ body {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+<<<<<<< HEAD
 .work ul li.active {
+=======
+.work ul li.active,
+.work ul li:hover {
+>>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
   background-color: #ff3120;
   border-color: #ff3120;
   color: #fff;
 }
+<<<<<<< HEAD
 .work ul li.active:hover {
   transform: scale(1) translate(0, 0);
   -webkit-box-shadow: 0 0 1px #ff3120;
@@ -338,6 +344,8 @@ body {
 .work ul li:active {
   transform: scale(1.1) translate(0, 0);
 }
+=======
+>>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
 .work .shuffle-images .container-fluid {
   padding: 0;
 }
