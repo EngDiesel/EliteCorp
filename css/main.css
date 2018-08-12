@@ -16,9 +16,10 @@
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
+  max-width: 100%;
 }
 body {
-  height: 2000px;
+  height: 3000px;
 }
 /* End Global */
 .overlay {
@@ -160,8 +161,11 @@ body {
 }
 /* End SLider */
 /* Start Features */
-.features {
-  height: 400px;
+.features .row {
+  margin: 0;
+}
+.features .feature-item {
+  margin: 0 auto;
 }
 .features .feature-item span {
   margin-top: 70px;
@@ -191,7 +195,6 @@ body {
 /* Start Overview */
 .overview {
   background-color: #f2f3f9;
-  height: 350px;
   padding-top: 50px;
 }
 .overview h1 {
@@ -226,9 +229,11 @@ body {
   color: #034c6e;
 }
 .overview button {
+  text-transform: uppercase;
   background-color: #ff3120;
   border: none;
   padding: 10px 30px;
+  margin-bottom: 50px;
   color: #fff;
   -webkit-box-shadow: 0 7px 0 #999;
   -moz-box-shadow: 0 7px 0 #999;
@@ -267,6 +272,66 @@ body {
   outline: none;
 }
 /* End Overview */
+/* Start Work */
+.work {
+  padding-top: 50px;
+}
+.work h2 {
+  margin-bottom: 30px;
+}
+.work p {
+  line-height: 1.6;
+  width: 70%;
+  margin: 0 auto 50px;
+}
+.work ul {
+  margin: 0 auto 15px;
+}
+.work ul li {
+  padding: 10px 15px;
+  color: #034c6e;
+  border: 1px solid #034c6e;
+  margin: 10px 5px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.work ul li.active,
+.work ul li:hover {
+  background-color: #ff3120;
+  border-color: #ff3120;
+  color: #fff;
+}
+.work .shuffle-images .container-fluid {
+  padding: 0;
+}
+.work .shuffle-images .row {
+  margin: 0;
+}
+.work .shuffle-images .row .col-md {
+  padding: 0;
+  overflow: hidden;
+}
+.work .shuffle-images .row img {
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.work .shuffle-images .row img:hover {
+  transform: scale(1.1);
+}
+/* End Work */
 /* Start Keyframes */
 @keyframes rotation {
   25% {
