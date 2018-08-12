@@ -135,10 +135,12 @@
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+
+    max-width: 100%;
 }
 
 body {
-    height: 2000px;
+    height: 3000px;
 }
 
 /* End Global */
@@ -281,8 +283,11 @@ body {
 /* Start Features */
 
 .features {
-    height: 400px;
+    .row {
+        margin: 0;
+    }
     .feature-item {
+        margin: 0 auto;
         span {
             display: inline-block;
             margin-top: 70px;
@@ -314,7 +319,6 @@ body {
 
 .overview {
     background-color: #f2f3f9;
-    height: 350px;
     padding-top: 50px;
     h1 {
         color: #2d2d2d;
@@ -336,9 +340,11 @@ body {
         color: @blue
     }
     button {
+        text-transform: uppercase;
         background-color: @red;
         border: none;
         padding: 10px 30px;
+        margin-bottom: 50px;
         color: #fff;
         .boxShadow(0 7px 0 #999);
         .borderRadius(5px);
@@ -361,6 +367,63 @@ body {
 }
 
 /* End Overview */
+
+/* Start Work */
+
+.work {
+    padding-top: 50px;
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    p {
+        line-height: 1.6;
+        width: 70%;
+        margin: 0 auto 50px;
+    }
+    ul {
+        margin: 0 auto 15px;
+        li {
+            padding: 10px 15px;
+            color: @blue;
+            border: 1px solid @blue;
+            margin: 10px 5px;
+            cursor: pointer;
+            .borderRadius(5px);
+            .transition;
+            &.active {
+                background-color: @red;
+                border-color: @red;
+                color: #fff;
+            }
+            &:hover {
+                transform: translate(3px, 1px);
+            }
+        }
+    }
+    .shuffle-images {
+        .container-fluid {
+            padding: 0;
+        }
+        .row {
+            margin: 0;
+            .col-md {
+                padding: 0;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                .transition;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* End Work */
 
 /* Start Keyframes */
 
