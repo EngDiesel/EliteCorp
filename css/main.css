@@ -304,19 +304,11 @@ body {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-<<<<<<< HEAD
 .work ul li.active {
-=======
-.work ul li.active,
-.work ul li:hover {
->>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
   background-color: #ff3120;
   border-color: #ff3120;
   color: #fff;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .work ul li.active:hover {
   transform: scale(1) translate(0, 0);
   -webkit-box-shadow: 0 0 1px #ff3120;
@@ -330,15 +322,22 @@ body {
   -o-text-shadow: 0 0 1px #ff3120;
   text-shadow: 0 0 1px #ff3120;
 }
-=======
->>>>>>> parent of aa0fbc3... fixed filters bug.
-=======
->>>>>>> parent of aa0fbc3... fixed filters bug.
 .work ul li:hover {
-  transform: translate(3px, 1px);
+  transform: scale(1) translate(3px, 1px);
+  -webkit-box-shadow: 0 0 5px #034c6e;
+  -moz-box-shadow: 0 0 5px #034c6e;
+  -ms-box-shadow: 0 0 5px #034c6e;
+  -o-box-shadow: 0 0 5px #034c6e;
+  box-shadow: 0 0 5px #034c6e;
+  -webkit-text-shadow: 0 0 1px #034c6e;
+  -moz-text-shadow: 0 0 1px #034c6e;
+  -ms-text-shadow: 0 0 1px #034c6e;
+  -o-text-shadow: 0 0 1px #034c6e;
+  text-shadow: 0 0 1px #034c6e;
 }
-=======
->>>>>>> b98f786d55446fd8e6d36a4b69d4d41d16beb93e
+.work ul li:active {
+  transform: scale(1.1) translate(0, 0);
+}
 .work .shuffle-images .container-fluid {
   padding: 0;
 }
