@@ -395,9 +395,19 @@ body {
                 background-color: @red;
                 border-color: @red;
                 color: #fff;
+                &:hover {
+                    transform: scale(1) translate(0, 0);
+                    .boxShadow(0 0 1px @red);
+                    .textShadow(@red);
+                }
             }
             &:hover {
-                transform: translate(3px, 1px);
+                transform: scale(1) translate(3px, 1px);
+                .boxShadow(0 0 5px @blue);
+                .textShadow(@blue);
+            }
+            &:active {
+                transform: scale(1.1) translate(0, 0);
             }
         }
     }
