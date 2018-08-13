@@ -23,6 +23,11 @@ $(function () {
         $('.slider, .carousel-item').height(winH - (upperH + navH));
     }
     adjustSliderHieght();
+    $('.slider .carousel').carousel({
+        pause: false,
+        keyboard: false,
+        interval: 3000
+    })
     // End Slider
 
     // Start Shuffle
@@ -38,7 +43,6 @@ $(function () {
             $('.work .shuffle-images .col-md').fadeTo('slow', 0.1);
             $('.work .shuffle-images .col-md ' + dataClass).parent().fadeTo('slow', 1);
         }
-
     });
     // End Shuffle
 
