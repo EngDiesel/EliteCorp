@@ -324,7 +324,6 @@ body {
                 .animation(rotation .6s linear infinite);
             }
         }
-
         h3 {
             margin: 15px auto 10px;
             color: @blue;
@@ -457,6 +456,62 @@ body {
 }
 
 /* End Work */
+
+/* Start Lates Posts */
+
+.latest-posts {
+    h2 {
+        margin: 80px auto 20px;
+    }
+    p {
+        width: 70%;
+        margin: 0 auto 50px;
+    }
+    .row {
+        margin: 0;
+    }
+    .card {
+        margin: 0 auto 50px;
+        padding: 0 20px;
+        border: none;
+        .borderRadius(0);
+        .transition;
+        &:hover {
+            img {
+                filter: grayscale(.2);
+            }
+        }
+        img {
+            .transition;
+            .borderRadius(0);
+            filter: grayscale(.9);
+        }
+        .card-body {
+            margin-bottom: 50px;
+            padding: 0;
+            h5 {
+                margin-top: 10px;
+                margin-bottom: 0;
+                color: @blue;
+            }
+            span {
+                display: inline-block;
+                font-size: 12px;
+                color: fade(#666, 50%);
+                margin-bottom: 7px;
+            }
+            p {
+                margin: 0 0 20px;
+                color: #636363;
+                a {
+                    color: @red;
+                }
+            }
+        }
+    }
+}
+
+/* End Lates Posts */
 
 /* Start Keyframes */
 

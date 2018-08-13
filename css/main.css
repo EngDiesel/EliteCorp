@@ -395,6 +395,71 @@ body {
   transform: scale(1.1);
 }
 /* End Work */
+/* Start Lates Posts */
+.latest-posts h2 {
+  margin: 80px auto 20px;
+}
+.latest-posts p {
+  width: 70%;
+  margin: 0 auto 50px;
+}
+.latest-posts .row {
+  margin: 0;
+}
+.latest-posts .card {
+  margin: 0 auto 50px;
+  padding: 0 20px;
+  border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.latest-posts .card:hover img {
+  filter: grayscale(0.2);
+}
+.latest-posts .card img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  filter: grayscale(0.9);
+}
+.latest-posts .card .card-body {
+  margin-bottom: 50px;
+  padding: 0;
+}
+.latest-posts .card .card-body h5 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: #034c6e;
+}
+.latest-posts .card .card-body span {
+  display: inline-block;
+  font-size: 12px;
+  color: rgba(102, 102, 102, 0.5);
+  margin-bottom: 7px;
+}
+.latest-posts .card .card-body p {
+  margin: 0 0 20px;
+  color: #636363;
+}
+.latest-posts .card .card-body p a {
+  color: #ff3120;
+}
+/* End Lates Posts */
 /* Start Keyframes */
 @keyframes rotation {
   25% {
