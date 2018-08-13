@@ -552,6 +552,103 @@ body {
 
 /* End Testimonials */
 
+/* Start Pricing Table */
+
+.pricing-table {
+    .col-lg {
+        padding: 0 35px;
+    }
+    background-color: #f5f5f5;
+    padding-top: 80px;
+    h2 {
+        margin: 0 auto 40px;
+    }
+    p {
+        width: 70%;
+        margin: 0 auto 30px;
+    }
+    .row {
+        margin: 0;
+    }
+    .price-card {
+        padding-top: 30px;
+        margin: 30px auto;
+        background-color: #fff;
+        color: #808080;
+        .boxShadow(0 0 30px 5px #cecece);
+        .transition;
+        &:hover {
+            .boxShadow(0 0 20px 2px #cecece);
+        }
+        h4 {
+            color: @blue;
+        }
+        & > span {
+            margin-bottom: 30px;
+            display: block;
+        }
+        h2.price {
+            font-style: italic;
+            background-color: #f5f5f5;
+            padding: 10px 0;
+            color: @blue;
+            margin: 0 auto 20px;
+            span {
+                font-size: 18px;
+            }
+        }
+        ul li {
+            margin: 10px;
+        }
+        button {
+            .textTransform(uppercase);
+            background-color: @red;
+            border: none;
+            padding: 10px 30px;
+            margin: 15px auto 50px;
+            color: #fff;
+            .boxShadow(0 7px 0 darken(@red, 30%));
+            .borderRadius(5px);
+            cursor: pointer;
+            .transition;
+            &:hover {
+                .transform(translate(0, 1px));
+                .boxShadow(0 6px 0 darken(@red, 30%));
+            }
+
+            &:active {
+                .transform(translate(0, 3px));
+                .boxShadow(0 4px 0 #333);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+        &.active {
+            margin-top: 10px;
+            h2.price {
+                background-color: @red;
+                color: white;
+            }
+            button {
+                background-color: @blue;
+                .boxShadow(0 7px 0 darken(@blue, 10%));
+                &:hover {
+                    .boxShadow(0 6px 0 darken(@blue, 15%));
+                }
+
+                &:active {
+                    .transform(translate(0, 3px));
+                    .boxShadow(0 3px 0 #333);
+                }
+            }
+        }
+    }
+}
+
+/* End Pricing Table */
+
 /* Start Keyframes */
 
 .keyframes(rotation,
