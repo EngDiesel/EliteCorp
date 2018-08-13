@@ -8,12 +8,19 @@
 /* Start Mixins */
 
 .transition {
-    transition: all .3s ease;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+}
+
+.transform(@val) {
+    -webkit-transform: @val;
+    -moz-transform: @val;
+    -ms-transform: @val;
+    -o-transform: @val;
+    transform: @val;
 }
 
 .textShadow(@color) {
@@ -65,62 +72,78 @@
 }
 
 .keyframes(@name, @_25, @_50, @_75, @_100) {
-    @keyframes rotation {
+    @keyframes @name {
         25% {
-            transform: @_25;
+            .transform(@_25);
         }
         50% {
-            transform: @_50;
+            .transform(@_50);
         }
         75% {
-            transform: @_75;
+            .transform(@_75);
         }
         100% {
-            transform: @_100;
+            .transform(@_100);
         }
     }
 
-    @-webkit-keyframes rotation {
+    @-webkit-keyframes @name {
         25% {
-            transform: @_25;
+            .transform(@_25);
         }
         50% {
-            transform: @_50;
+            .transform(@_50);
         }
         75% {
-            transform: @_75;
+            .transform(@_75);
         }
         100% {
-            transform: @_100;
+            .transform(@_100);
         }
     }
 
-    @-moz-keyframes rotation {
+    @-moz-keyframes @name {
         25% {
-            transform: @_25;
+            .transform(@_25);
         }
         50% {
-            transform: @_50;
+            .transform(@_50);
         }
         75% {
-            transform: @_75;
+            .transform(@_75);
         }
         100% {
-            transform: @_100;
+            .transform(@_100);
         }
     }
-    @-o-keyframes rotation {
+
+    @-ms-keyframes @name {
         25% {
-            transform: @_25;
+            .transform(@_25);
         }
         50% {
-            transform: @_50;
+            .transform(@_50);
         }
         75% {
-            transform: @_75;
+            .transform(@_75);
         }
         100% {
-            transform: @_100;
+            .transform(@_100);
+        }
+    }
+
+    @-o-keyframes @name {
+        25% {
+            .transform(@_25);
+        }
+        50% {
+            .transform(@_50);
+        }
+        75% {
+            .transform(@_75);
+        }
+        100% {
+            .transform(@_100);
         }
     }
 }
@@ -179,7 +202,7 @@ body {
         }
         &:active {
             .boxShadow(0 2px 0 darken(@red, 15%));
-            transform: translate(0, 3px);
+            .transform(translate(0, 3px));
         }
     }
 
@@ -208,7 +231,7 @@ body {
                 color: lighten(@blue, 20%);
             }
             &:active {
-                transform: scale(1.1);
+                .transform(scale(1.1));
             }
         }
         .active {
@@ -340,7 +363,7 @@ body {
         color: @blue
     }
     button {
-        text-transform: uppercase;
+        .textTransform(uppercase);
         background-color: @red;
         border: none;
         padding: 10px 30px;
@@ -351,12 +374,12 @@ body {
         cursor: pointer;
         .transition;
         &:hover {
-            transform: translate(0, 1px);
+            .transform(translate(0, 1px));
             .boxShadow(0 6px 0 #999);
         }
 
         &:active {
-            transform: translate(0, 3px);
+            .transform(translate(0, 3px));
             .boxShadow(0 4px 0 #999);
         }
 
@@ -385,30 +408,30 @@ body {
         margin: 0 auto 15px;
         li {
             padding: 10px 15px;
-            color: @blue;
-            border: 1px solid @blue;
+            color: white;
+            background-color: lighten(@blue, 5%);
             margin: 10px 5px;
+            .boxShadow(0 10px 0 darken(@blue, 10%));
+            &:hover {
+                .transform(translate(0, 2px));
+                .boxShadow(0 8px 0 darken(@blue, 10%));
+            }
             cursor: pointer;
             .borderRadius(5px);
             .transition;
             &.active {
-                background-color: @red;
-                border-color: @red;
+                .boxShadow(0 10px 0 darken(@red, 10%));
+                background-color: lighten(@red, 5%);
                 color: #fff;
                 &:hover {
-                    transform: scale(1) translate(0, 0);
-                    .boxShadow(0 0 1px @red);
-                    .textShadow(@red);
+                    .boxShadow(0 8px 0 darken(@red, 10%));
                 }
             }
-            &:hover {
-                transform: scale(1) translate(3px, 1px);
-                .boxShadow(0 0 5px @blue);
-                .textShadow(@blue);
-            }
             &:active {
-                transform: scale(1.1) translate(0, 0);
+                .transform(translate(0, 4px));
+                .boxShadow(0 6px 0 darken(@red, 10%));
             }
+
         }
     }
     .shuffle-images {
@@ -426,7 +449,7 @@ body {
                 width: 100%;
                 .transition;
                 &:hover {
-                    transform: scale(1.1);
+                    .transform(scale(1.1));
                 }
             }
         }
