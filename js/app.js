@@ -27,7 +27,7 @@ $(function () {
         pause: false,
         keyboard: false,
         interval: 3000
-    })
+    });
     // End Slider
 
     // Start Shuffle

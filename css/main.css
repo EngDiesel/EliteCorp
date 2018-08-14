@@ -474,11 +474,15 @@ body {
   background: url(../images/testimonials.jpg);
   background-attachment: fixed;
 }
-.testimonials .carousel .carousel-caption {
-  position: absolute;
-  top: 50px;
+.testimonials .carousel .carousel-item {
+  display: flex;
+  align-items: center;
 }
-.testimonials .carousel .carousel-caption img {
+.testimonials .carousel .carousel-item .carousel-caption {
+  position: absolute;
+  top: 5%;
+}
+.testimonials .carousel .carousel-item .carousel-caption img {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
@@ -488,11 +492,11 @@ body {
   -o-border-radius: 50%;
   border-radius: 50%;
 }
-.testimonials .carousel .carousel-caption h5 {
+.testimonials .carousel .carousel-item .carousel-caption h5 {
   color: #0691d1;
   margin-bottom: 10px;
 }
-.testimonials .carousel .carousel-caption q {
+.testimonials .carousel .carousel-item .carousel-caption q {
   letter-spacing: 2px;
   font-style: italic;
   font-family: 'times new roman';
@@ -520,7 +524,7 @@ body {
 }
 .pricing-table .price-card {
   padding-top: 30px;
-  margin: 30px auto;
+  margin: 30px auto 100px;
   background-color: #fff;
   color: #808080;
   -webkit-box-shadow: 0 0 30px 5px #cecece;
@@ -651,6 +655,87 @@ body {
   box-shadow: 0 3px 0 #333;
 }
 /* End Pricing Table */
+/* Start Why Choose Us */
+.choose-us {
+  margin: 0 auto;
+}
+.choose-us .row {
+  margin: 0;
+  padding: 0;
+}
+.choose-us .col-lg-7 {
+  width: 100%;
+  background-color: #034c6e;
+  color: #fff;
+  padding: 0 20px 0 50px;
+  display: flex;
+  align-items: center;
+}
+.choose-us .col-lg-7 h2 {
+  margin: 50px 0 30px;
+}
+.choose-us .col-lg-7 button {
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+  background-color: #ff3120;
+  border: none;
+  padding: 10px 30px;
+  margin: 0;
+  color: #fff;
+  -webkit-box-shadow: 0 7px 0 #860a00;
+  -moz-box-shadow: 0 7px 0 #860a00;
+  -ms-box-shadow: 0 7px 0 #860a00;
+  -o-box-shadow: 0 7px 0 #860a00;
+  box-shadow: 0 7px 0 #860a00;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.choose-us .col-lg-7 button:hover {
+  -webkit-transform: translate(0, 1px);
+  -moz-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  -o-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+  -webkit-box-shadow: 0 6px 0 #860a00;
+  -moz-box-shadow: 0 6px 0 #860a00;
+  -ms-box-shadow: 0 6px 0 #860a00;
+  -o-box-shadow: 0 6px 0 #860a00;
+  box-shadow: 0 6px 0 #860a00;
+}
+.choose-us .col-lg-7 button:active {
+  -webkit-transform: translate(0, 3px);
+  -moz-transform: translate(0, 3px);
+  -ms-transform: translate(0, 3px);
+  -o-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 4px 0 #333;
+  -moz-box-shadow: 0 4px 0 #333;
+  -ms-box-shadow: 0 4px 0 #333;
+  -o-box-shadow: 0 4px 0 #333;
+  box-shadow: 0 4px 0 #333;
+}
+.choose-us .col-lg-7 button:focus {
+  outline: none;
+}
+.choose-us .col-lg-5 {
+  padding: 0;
+}
+.choose-us .col-lg-5 img {
+  width: 100%;
+}
+/* End Why Choose Us */
 /* Start Keyframes */
 @keyframes rotation {
   25% {

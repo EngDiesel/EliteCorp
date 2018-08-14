@@ -526,25 +526,29 @@ body {
     background-attachment: fixed;
 
     .carousel {
-        .carousel-caption {
-            position: absolute;
-            top: 50px;
-            img {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 20px;
-                .borderRadius(50%);
-            }
-            h5 {
-                color: lighten(@blue, 20%);
-                margin-bottom: 10px;
-            }
-            q {
-                letter-spacing: 2px;
-                font-style: italic;
-                font-family: 'times new roman';
-                margin-bottom: 50px;
-                color: #e4e4e4;
+        .carousel-item {
+            display: flex;
+            align-items: center;
+            .carousel-caption {
+                position: absolute;
+                top: 5%;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin-bottom: 20px;
+                    .borderRadius(50%);
+                }
+                h5 {
+                    color: lighten(@blue, 20%);
+                    margin-bottom: 10px;
+                }
+                q {
+                    letter-spacing: 2px;
+                    font-style: italic;
+                    font-family: 'times new roman';
+                    margin-bottom: 50px;
+                    color: #e4e4e4;
+                }
             }
         }
     }
@@ -572,7 +576,7 @@ body {
     }
     .price-card {
         padding-top: 30px;
-        margin: 30px auto;
+        margin: 30px auto 100px;
         background-color: #fff;
         color: #808080;
         .boxShadow(0 0 30px 5px #cecece);
@@ -648,6 +652,60 @@ body {
 }
 
 /* End Pricing Table */
+
+/* Start Why Choose Us */
+
+.choose-us {
+    margin: 0 auto;
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+    .col-lg-7 {
+        width: 100%;
+        background-color: @blue;
+        color: #fff;
+        padding: 0 20px 0 50px;
+        display: flex;
+        align-items: center;
+        h2 {
+            margin: 50px 0 30px;
+        }
+        button {
+            .textTransform(uppercase);
+            background-color: @red;
+            border: none;
+            padding: 10px 30px;
+            margin: 0;
+            color: #fff;
+            .boxShadow(0 7px 0 darken(@red, 30%));
+            .borderRadius(5px);
+            cursor: pointer;
+            .transition;
+            &:hover {
+                .transform(translate(0, 1px));
+                .boxShadow(0 6px 0 darken(@red, 30%));
+            }
+
+            &:active {
+                .transform(translate(0, 3px));
+                .boxShadow(0 4px 0 #333);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .col-lg-5 {
+        padding: 0;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* End Why Choose Us */
 
 /* Start Keyframes */
 
