@@ -97,7 +97,7 @@ $(function () {
 
     // ======> Start: trigger on scroll 
     $(window).on('scroll', function () {
-        var isElementInView = Utils.isElementInView($('#statistics'), true);
+        var isElementInView = Utils.isElementInView($('#statistics'), false);
         if (isElementInView) {
             countEffect('.count');
             $(window).off('scroll');

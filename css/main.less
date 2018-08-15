@@ -193,6 +193,11 @@
     z-index: 0;
 }
 
+.secondary-heading {
+    color: @blue;
+    margin: 20px 0;
+}
+
 /* End Global */
 
 /* Start Upper-bar */
@@ -773,10 +778,57 @@
             outline: none;
         }
     }
-
 }
 
 /* End Let's Work Together */
+
+/* Start Footer */
+
+footer {
+    p {
+        color: #555;
+    }
+
+    div {
+        div {
+            margin: 15px 0;
+            color: #888;
+        }
+    }
+
+    .copyrights {
+        ul li {
+            float: right;
+            display: inline-block;
+            margin: 0 10px;
+            a {
+                color: #888;
+                .transition;
+                &.facebook:hover {
+                    color: #4267b2;
+                }
+                &.twitter:hover {
+                    color: #1da1f2
+                }
+                &.github:hover {
+                    color: #666
+                }
+                &.linked:hover {
+                    color: #0077b5
+                }
+                &.insta:hover {
+                    color: #f73341
+                }
+            }
+        }
+    }
+    #heart {
+        .animation(.5s beats infinite);
+        color: red;
+    }
+}
+
+/* End Footer */
 
 /* Start Keyframes */
 
@@ -786,4 +838,9 @@ rotate(0),
 rotate(-15deg),
 rotate(0));
 
+.keyframes(beats,
+scale(1.05),
+scale(1.1),
+scale(1.15),
+scale(1));
 /* End Keyframes */
