@@ -166,11 +166,20 @@
     max-width: 100%;
 }
 
-body {
-    height: 3000px;
+
+.main-brand {
+    color: @blue  !important;
+    font-weight: bold;
+    font-size: 32px;
+    &:hover {
+        color: @blue;
+    }
+    span {
+        color: @red;
+        font-weight: lighter;
+    }
 }
 
-/* End Global */
 
 .overlay {
     width: 100%;
@@ -184,6 +193,8 @@ body {
     z-index: 0;
 }
 
+/* End Global */
+
 /* Start Upper-bar */
 
 .upper-bar {
@@ -194,18 +205,24 @@ body {
         text-align: right;
     }
     button {
-        color: #eee;
-        border: 1px solid @red;
-        background-color: transparent;
+        .textTransform(uppercase);
+        color: #fff;
+        background-color: @red;
+        border: none;
+        padding: 5px 20px;
         .transition();
-        .borderRadius(5px);
-        .boxShadow(0 5px 0 darken(@red, 10%));
+        .borderRadius(4px);
+        .boxShadow(0 5px 0 darken(@red, 15%));
         cursor: pointer;
         &:focus {
             outline: none;
         }
+        &:hover {
+            .boxShadow(0 4px 0 darken(@red, 20%));
+            .transform(translate(0, 1px));
+        }
         &:active {
-            .boxShadow(0 2px 0 darken(@red, 15%));
+            .boxShadow(0 2px 0 darken(@red, 30%));
             .transform(translate(0, 3px));
         }
     }
@@ -247,21 +264,6 @@ body {
     }
 }
 
-.navbar {
-    .navbar-brand {
-        color: @blue;
-        font-weight: bold;
-        font-size: 32px;
-        &:hover {
-            color: @blue;
-        }
-        span {
-            color: @red;
-            font-weight: lighter;
-        }
-    }
-}
-
 /* End Navbar */
 
 /* Start SLider */
@@ -273,11 +275,11 @@ body {
             align-items: center;
             h1 {
                 position: absolute;
-                left: 100px;
+                left: 5%;
                 color: #eee !important;
                 z-index: 3;
                 span {
-                    background-color: fade(@red, 85%);
+                    background-color: @red;
                     .borderRadius(5px);
                     padding: 0 10px 5px;
                     margin-top: 5px;
@@ -297,7 +299,6 @@ body {
                     background-image: url(../images/Tablet.jpg);
                 }
             }
-
             .overlay {
                 background-color: fade(#222, 80%);
                 z-index: 1;
@@ -579,10 +580,10 @@ body {
         margin: 30px auto 100px;
         background-color: #fff;
         color: #808080;
-        .boxShadow(0 0 30px 5px #cecece);
+        .boxShadow(0 0 30px 10px #dadada);
         .transition;
         &:hover {
-            .boxShadow(0 0 20px 2px #cecece);
+            .boxShadow(0 0 20px 2px #dadada);
         }
         h4 {
             color: @blue;
@@ -661,6 +662,9 @@ body {
         margin: 0;
         padding: 0;
     }
+    .content {
+        padding-bottom: 30px;
+    }
     .col-lg-7 {
         width: 100%;
         background-color: @blue;
@@ -706,6 +710,73 @@ body {
 }
 
 /* End Why Choose Us */
+
+/* Start Statistics */
+
+.statistics {
+    color: @blue;
+    padding: 70px 0;
+    .row {
+        margin: 0;
+        .col-md {
+            div:last-child {
+                color: @red;
+                font-style: italic;
+            }
+            .count {
+                margin-top: 10px;
+                font-size: 36px;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+/* End Statistics */
+
+/* Start Let's Work Together */
+
+.work-together {
+    background-color: @red;
+    color: white;
+    padding: 50px 0 50px;
+    h2 {
+        margin: 20px 0 20px;
+    }
+    .col-md-4 {
+        display: flex;
+        align-items: center;
+    }
+    button {
+        display: block;
+        background-color: @blue;
+        border: none;
+        margin: 20px auto 20px;
+        padding: 10px 30px;
+        color: #fff;
+        cursor: pointer;
+        .textTransform(uppercase);
+        .boxShadow(0 7px 0 darken(@blue, 10%));
+        .borderRadius(5px);
+        .transition;
+        &:hover {
+            .transform(translate(0, 1px));
+            .boxShadow(0 6px 0 darken(@blue, 15%));
+        }
+
+        &:active {
+            .transform(translate(0, 3px));
+            .boxShadow(0 4px 0 darken(@blue, 20%));
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+
+/* End Let's Work Together */
 
 /* Start Keyframes */
 

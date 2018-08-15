@@ -25,11 +25,7 @@
   box-sizing: border-box;
   max-width: 100%;
 }
-body {
-  height: 3000px;
-}
-/* End Global */
-.overlay {
+and many other awesome .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -50,35 +46,53 @@ body {
   text-align: right;
 }
 .upper-bar button {
-  color: #eee;
-  border: 1px solid #ff3120;
-  background-color: transparent;
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff3120;
+  border: none;
+  padding: 5px 20px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 5px 0 #ec1200;
-  -moz-box-shadow: 0 5px 0 #ec1200;
-  -ms-box-shadow: 0 5px 0 #ec1200;
-  -o-box-shadow: 0 5px 0 #ec1200;
-  box-shadow: 0 5px 0 #ec1200;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 5px 0 #d31000;
+  -moz-box-shadow: 0 5px 0 #d31000;
+  -ms-box-shadow: 0 5px 0 #d31000;
+  -o-box-shadow: 0 5px 0 #d31000;
+  box-shadow: 0 5px 0 #d31000;
   cursor: pointer;
 }
 .upper-bar button:focus {
   outline: none;
 }
+.upper-bar button:hover {
+  -webkit-box-shadow: 0 4px 0 #b90e00;
+  -moz-box-shadow: 0 4px 0 #b90e00;
+  -ms-box-shadow: 0 4px 0 #b90e00;
+  -o-box-shadow: 0 4px 0 #b90e00;
+  box-shadow: 0 4px 0 #b90e00;
+  -webkit-transform: translate(0, 1px);
+  -moz-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  -o-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+}
 .upper-bar button:active {
-  -webkit-box-shadow: 0 2px 0 #d31000;
-  -moz-box-shadow: 0 2px 0 #d31000;
-  -ms-box-shadow: 0 2px 0 #d31000;
-  -o-box-shadow: 0 2px 0 #d31000;
-  box-shadow: 0 2px 0 #d31000;
+  -webkit-box-shadow: 0 2px 0 #860a00;
+  -moz-box-shadow: 0 2px 0 #860a00;
+  -ms-box-shadow: 0 2px 0 #860a00;
+  -o-box-shadow: 0 2px 0 #860a00;
+  box-shadow: 0 2px 0 #860a00;
   -webkit-transform: translate(0, 3px);
   -moz-transform: translate(0, 3px);
   -ms-transform: translate(0, 3px);
@@ -124,15 +138,15 @@ body {
   text-shadow: 0 0 1px #ff3120;
   color: #ff3120;
 }
-.navbar .navbar-brand {
-  color: #034c6e;
+.main-brand {
+  color: #034c6e !important;
   font-weight: bold;
   font-size: 32px;
 }
-.navbar .navbar-brand:hover {
+.main-brand:hover {
   color: #034c6e;
 }
-.navbar .navbar-brand span {
+.main-brand span {
   color: #ff3120;
   font-weight: lighter;
 }
@@ -144,12 +158,12 @@ body {
 }
 .slider .carousel .carousel-inner h1 {
   position: absolute;
-  left: 100px;
+  left: 5%;
   color: #eee !important;
   z-index: 3;
 }
 .slider .carousel .carousel-inner h1 span {
-  background-color: rgba(255, 49, 32, 0.85);
+  background-color: #ff3120;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -527,11 +541,11 @@ body {
   margin: 30px auto 100px;
   background-color: #fff;
   color: #808080;
-  -webkit-box-shadow: 0 0 30px 5px #cecece;
-  -moz-box-shadow: 0 0 30px 5px #cecece;
-  -ms-box-shadow: 0 0 30px 5px #cecece;
-  -o-box-shadow: 0 0 30px 5px #cecece;
-  box-shadow: 0 0 30px 5px #cecece;
+  -webkit-box-shadow: 0 0 30px 10px #dadada;
+  -moz-box-shadow: 0 0 30px 10px #dadada;
+  -ms-box-shadow: 0 0 30px 10px #dadada;
+  -o-box-shadow: 0 0 30px 10px #dadada;
+  box-shadow: 0 0 30px 10px #dadada;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -539,11 +553,11 @@ body {
   transition: all 0.3s ease;
 }
 .pricing-table .price-card:hover {
-  -webkit-box-shadow: 0 0 20px 2px #cecece;
-  -moz-box-shadow: 0 0 20px 2px #cecece;
-  -ms-box-shadow: 0 0 20px 2px #cecece;
-  -o-box-shadow: 0 0 20px 2px #cecece;
-  box-shadow: 0 0 20px 2px #cecece;
+  -webkit-box-shadow: 0 0 20px 2px #dadada;
+  -moz-box-shadow: 0 0 20px 2px #dadada;
+  -ms-box-shadow: 0 0 20px 2px #dadada;
+  -o-box-shadow: 0 0 20px 2px #dadada;
+  box-shadow: 0 0 20px 2px #dadada;
 }
 .pricing-table .price-card h4 {
   color: #034c6e;
@@ -663,6 +677,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.choose-us .content {
+  padding-bottom: 30px;
+}
 .choose-us .col-lg-7 {
   width: 100%;
   background-color: #034c6e;
@@ -736,6 +753,94 @@ body {
   width: 100%;
 }
 /* End Why Choose Us */
+/* Start Statistics */
+.statistics {
+  color: #034c6e;
+  padding: 70px 0;
+}
+.statistics .row {
+  margin: 0;
+}
+.statistics .row .col-md div:last-child {
+  color: #ff3120;
+  font-style: italic;
+}
+.statistics .row .col-md .count {
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: bolder;
+}
+/* End Statistics */
+/* Start Let's Work Together */
+.work-together {
+  background-color: #ff3120;
+  color: white;
+  padding: 50px 0 50px;
+}
+.work-together h2 {
+  margin: 20px 0 20px;
+}
+.work-together .col-md-4 {
+  display: flex;
+  align-items: center;
+}
+.work-together button {
+  display: block;
+  background-color: #034c6e;
+  border: none;
+  margin: 20px auto 20px;
+  padding: 10px 30px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-text-transform: uppercase;
+  -moz-text-transform: uppercase;
+  -ms-text-transform: uppercase;
+  -o-text-transform: uppercase;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 7px 0 #022a3c;
+  -moz-box-shadow: 0 7px 0 #022a3c;
+  -ms-box-shadow: 0 7px 0 #022a3c;
+  -o-box-shadow: 0 7px 0 #022a3c;
+  box-shadow: 0 7px 0 #022a3c;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.work-together button:hover {
+  -webkit-transform: translate(0, 1px);
+  -moz-transform: translate(0, 1px);
+  -ms-transform: translate(0, 1px);
+  -o-transform: translate(0, 1px);
+  transform: translate(0, 1px);
+  -webkit-box-shadow: 0 6px 0 #011924;
+  -moz-box-shadow: 0 6px 0 #011924;
+  -ms-box-shadow: 0 6px 0 #011924;
+  -o-box-shadow: 0 6px 0 #011924;
+  box-shadow: 0 6px 0 #011924;
+}
+.work-together button:active {
+  -webkit-transform: translate(0, 3px);
+  -moz-transform: translate(0, 3px);
+  -ms-transform: translate(0, 3px);
+  -o-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 4px 0 #00070b;
+  -moz-box-shadow: 0 4px 0 #00070b;
+  -ms-box-shadow: 0 4px 0 #00070b;
+  -o-box-shadow: 0 4px 0 #00070b;
+  box-shadow: 0 4px 0 #00070b;
+}
+.work-together button:focus {
+  outline: none;
+}
+/* End Let's Work Together */
 /* Start Keyframes */
 @keyframes rotation {
   25% {
