@@ -882,6 +882,9 @@ footer .copyrights ul li a.linked:hover {
 footer .copyrights ul li a.insta:hover {
   color: #f73341;
 }
+footer .copyrights ul li a.codepen:hover {
+  color: #666;
+}
 footer #heart {
   -webkit-animation: 0.5s beats infinite;
   -moz-animation: 0.5s beats infinite;
