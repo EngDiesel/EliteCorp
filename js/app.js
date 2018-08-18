@@ -1,6 +1,43 @@
 /*global $, window*/
 $(function () {
     'use strict';
+
+    // Start smooth scroll 
+    var scrollLink = $('.scrollLink');
+    scrollLink.click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top - 25
+        }, 1000);
+    });
+
+    // Active link switching
+    $(window).scroll(function () {
+        var scrollbarLocation = $(this).scrollTop();
+
+        scrollLink.each(function () {
+
+            var sectionOffset = $(this.hash).offset().top - 80;
+
+            if (sectionOffset <= scrollbarLocation) {
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+            }
+        })
+
+    })
+
+
+
+    // Trigger Nice Scroll
+    $('body').niceScroll({
+        cursorcolor: '#ff3120',
+        cursoropacitymax: 0.6,
+        cursorborder: 'none',
+        cursorborderradius: '5px',
+        zindex: 99
+    });
+
     // Start Global
     function activeClassHandeler(className) {
         $(className).each(function () {
@@ -121,13 +158,19 @@ $(function () {
             showCursor: false,
             backDelay: 1800,
             loop: true
-        }
-
-
-
-    var typedHeader = new Typed(".main-header", headeroptions);
-    var typedCool = new Typed("#weAreCool", coolOptions);
-
+        },
+        qouteOptions = {
+            strings: ["oat cake chocolate. Tiramisu soufflé wafer. Fruitcake sweet pudding biscuit dessert tootsie roll dragée brownie. Jelly-o cake marzipan gummi bears marshmallow", "lemon drops apple pie dessert oat cake chocolate. Tiramisu soufflé wafer. Fruitcake sweet pudding biscuit dessert tootsie roll dragée brownie. Jelly-o cake marzipan gummi bears marshmallow", "Tiramisu macaroon dragée lemon drops apple pie dessert oat cake chocolate. Tiramisu soufflé wafer. Fruitcake sweet pudding biscuit dessert tootsie roll dragée brownie. Jelly-o cake marzipan gummi bears marshmallow"],
+            typeSpeed: 40,
+            showCursor: false,
+            backDelay: 1800,
+            loop: true
+        },
+        typedHeader = new Typed(".main-header", headeroptions),
+        typedCool = new Typed("#weAreCool", coolOptions),
+        typedQuotes = new Typed('#qouteMostafa', qouteOptions),
+        typedQuotes = new Typed('#qouteAssem', qouteOptions),
+        typedQuotes = new Typed('#qouteMoataz', qouteOptions);
     // End test
 
 });

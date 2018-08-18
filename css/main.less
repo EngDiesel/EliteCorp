@@ -166,6 +166,14 @@
     max-width: 100%;
 }
 
+body {
+    padding-top: 80px;
+    position: absolute
+}
+
+.row {
+    margin: 0 !important;
+}
 
 .main-brand {
     color: @blue  !important;
@@ -203,14 +211,15 @@
 /* Start Upper-bar */
 
 .upper-bar {
+    padding: 20px 0;
     background-color: @blue;
-    padding: 15px;
     color: #fff;
-    .right-align {
-        text-align: right;
+    .info {
+        span {
+            display: inline-block;
+        }
     }
     button {
-        .textTransform(uppercase);
         color: #fff;
         background-color: @red;
         border: none;
@@ -247,10 +256,12 @@
 
 /* Start Navbar */
 
-.navbar-light {
+.navbar {
+    background-color: #fff;
+
     .navbar-nav {
         .nav-link {
-            color: @blue;
+            color: @blue  !important;
             .transition;
             .textShadow(0 0 2px #333);
             &:hover {
@@ -267,6 +278,7 @@
             }
         }
     }
+
 }
 
 /* End Navbar */
@@ -278,9 +290,9 @@
         .carousel-inner {
             display: flex;
             align-items: center;
+            justify-content: center;
             h1 {
                 position: absolute;
-                left: 5%;
                 color: #eee !important;
                 z-index: 3;
                 span {
@@ -291,7 +303,6 @@
                     display: inline-block;
                 }
             }
-
             .carousel-item {
                 background-size: cover;
                 &:nth-child(3) {
@@ -317,6 +328,7 @@
 /* Start Features */
 
 .features {
+    padding: 50px 0 50px;
     .row {
         margin: 0;
     }
@@ -324,7 +336,7 @@
         margin: 0 auto;
         span {
             display: inline-block;
-            margin-top: 70px;
+            margin-top: 30px;
             color: #fff;
             display: inline-block;
             width: 100px;
@@ -342,6 +354,7 @@
         p {
             text-align: center;
             color: #929292;
+            margin-bottom: 0;
         }
     }
 }
@@ -352,7 +365,7 @@
 
 .overview {
     background-color: #f2f3f9;
-    padding-top: 50px;
+    padding: 50px 0 50px;
     h1 {
         color: #2d2d2d;
         margin-bottom: 20px;
@@ -377,7 +390,6 @@
         background-color: @red;
         border: none;
         padding: 10px 30px;
-        margin-bottom: 50px;
         color: #fff;
         .boxShadow(0 7px 0 #999);
         .borderRadius(5px);
@@ -420,7 +432,7 @@
             padding: 10px 15px;
             color: white;
             background-color: lighten(@blue, 5%);
-            margin: 10px 5px;
+            margin: 10px 5px 30px;
             .boxShadow(0 10px 0 darken(@blue, 10%));
             &:hover {
                 .transform(translate(0, 2px));
@@ -454,7 +466,6 @@
                 padding: 0;
                 overflow: hidden;
             }
-
             img {
                 width: 100%;
                 .transition;
@@ -471,9 +482,7 @@
 /* Start Lates Posts */
 
 .latest-posts {
-    h2 {
-        margin: 80px auto 20px;
-    }
+    padding: 50px 0;
     p {
         width: 70%;
         margin: 0 auto 50px;
@@ -526,35 +535,41 @@
 
 /* Start Testimonials */
 
+@media (max-width: 500px) {
+    .testimonials {
+        width: 600px;
+    }
+}
+
 .testimonials {
-    height: 350px;
-    background: url(../images/testimonials.jpg);
+    background: url('../images/testimonials.jpg');
+    position: relative;
     background-attachment: fixed;
 
-    .carousel {
-        .carousel-item {
-            display: flex;
-            align-items: center;
-            .carousel-caption {
-                position: absolute;
-                top: 5%;
-                img {
-                    width: 100px;
-                    height: 100px;
-                    margin-bottom: 20px;
-                    .borderRadius(50%);
-                }
-                h5 {
-                    color: lighten(@blue, 20%);
-                    margin-bottom: 10px;
-                }
-                q {
-                    letter-spacing: 2px;
-                    font-style: italic;
-                    font-family: 'times new roman';
-                    margin-bottom: 50px;
-                    color: #e4e4e4;
-                }
+    .carousel-item {
+        .carousel-inner {
+            height: 600px;
+        }
+        .carousel-caption {
+            top: 15%;
+            img {
+                .borderRadius(50%);
+                margin-bottom: 10px;
+                max-width: 150px;
+                max-height: 150px;
+            }
+            h5 {
+                margin: 0;
+            }
+            span {
+                display: block;
+                margin-bottom: 20px;
+                color: #c7c7c7;
+            }
+            q {
+                display: block;
+                font-style: italic;
+                color: #ccc;
             }
         }
     }
@@ -847,3 +862,23 @@ scale(1.1),
 scale(1.15),
 scale(1));
 /* End Keyframes */
+
+/* Start Media Query */
+
+@media (max-width: 576px) {
+    .upper-bar .info:first-child {
+        margin-bottom: 0;
+    }
+
+
+
+    .slider .carousel-inner {
+        justify-content: center;
+        h1 {
+            font-size: 30px;
+            position: relative;
+        }
+    }
+}
+
+/* End Media Query */
